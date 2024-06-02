@@ -1,0 +1,114 @@
+:root {
+    --colorCirculos: rgb(0, 0, 0);
+    --colorBoton: rgb(88, 88, 87);
+    --coloFondosGris: rgb(177, 173, 173);
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.contenedorFlex {
+    display: flex;
+    width: 100%;
+    height: 91vh;
+    overflow: hidden;
+}
+
+.espacioIzquierdo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.menu {
+ flex: 1;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ gap: 90px;
+ align-items: center;
+}
+
+.menu a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--colorBoton);
+    width: 80%;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.espacioDerecho {
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+}
+
+.circuloIzquierdo {
+    height: 240px;
+    width: 240px;
+    background-color: var(--colorCirculos);
+    border-radius: 50%;
+    padding: 70px;
+    margin-left: -80px;
+    margin-bottom: -80px;
+
+}
+
+.circuloDerecho {
+    height: 240px;
+    width: 240px;
+    background-color: var(--colorCirculos);
+    border-radius: 50%;
+    padding: 70px;
+    margin-left:  150px;
+    margin-top: -80px;
+}
+
+.titulo {
+    background-color: var(--coloFondosGris);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 0px;
+    margin: 0px;
+    height: 60px;
+     
+}
+
+#menu {
+    gap: 20px
+}
+
+#titulo {
+    text-align: center;
+    flex-direction: row;
+}
+
+#titulo div {
+    width: 33.33%;
+}
+
+.campana {
+    display: flex;
+    justify-content: end;
+}
+
+.campana img {
+    margin-right: 20px;
+    height: 30px;
+    width: 30px;
+}

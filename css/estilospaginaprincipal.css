@@ -1,0 +1,72 @@
+:root {
+    --colorCirculos: rgb(0, 0, 0);
+    --colorBoton: rgb(88, 88, 87);
+    --coloFondosGris: rgb(177, 173, 173);
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.contenedorFlex {
+    display: flex;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+}
+
+.imagenPrincipal {
+    position: relative;
+    width: 50%;
+    background-color: rgb(126, 126, 126);
+}
+
+.imagenPrincipal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+.iniciarSesion {
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.iniciarSesion a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: var(--colorBoton);
+    margin: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+}
+
+
+
+.circulo1 {
+    height: 180px;
+    width: 180px;
+    background-color: var(--colorCirculos);
+    border-radius: 50%;
+    padding: 70px;
+    margin-left: 440px;
+    margin-top: -70px;
+}
+
+.circulo2 {
+    height: 300px;
+    width: 300px;
+    background-color: var(--colorCirculos);
+    border-radius: 50%;
+    padding: 70px;
+    margin-left: -50px;
+    margin-top: 70px;
+}
