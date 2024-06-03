@@ -1,0 +1,112 @@
+:root {
+    --colorCirculos: rgb(0, 0, 0);
+    --colorBoton: rgb(88, 88, 87);
+    --coloFondosGris: rgb(177, 173, 173);
+}
+
+.titulo {
+    width: 100%;
+    text-align: center;
+}
+
+.contenedorFlex {
+    display: flex;
+}
+
+.inputsInformacion {
+    margin-top: 15px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.inputsInformacion button {
+    border: 0px;
+    color: white;
+    background-color: var(--colorBoton);
+    border-radius: 10px;
+    height: 40px;
+    width: 100%;
+}
+
+.informacion {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.informacion label {
+    width: 30%;
+}
+
+.informacion input, textarea, select {
+    border: 0px;
+    background-color: rgb(180, 181, 182);
+    width: 70%;
+    border-radius: 5px;
+}
+
+.informacion input, select {
+    height: 40px;
+}
+
+.informacion textarea {
+    height: 120px;
+    max-height: 140px;
+    min-height: 100px;
+    max-width: 450px;
+    min-width: 450px;
+}
+
+.tablaDeTipos {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 13px;
+    background-color: var(--coloFondosGris);
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    width: 50%;
+    overflow: auto;
+    max-height: 533px;
+}
+
+
+.tdNombreIngreso {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.tdBotones {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-right: 20px;
+    gap: 10px;
+}
+
+.tdBotones button {
+    border: 0px;
+    background-color: var(--colorBoton);
+    border-radius: 5px;
+    color: white;
+    height: 33px;
+
+}
+
+.tablaDeTipos table tr {
+    display: inline-table;
+    border-radius: 10px;
+    width: 90%;
+    height: 40px;
+    background-color: rgb(206, 208, 209);
+    margin-bottom: 10px;
+}
+
+.tdCodigo {
+    display: none;
+}
