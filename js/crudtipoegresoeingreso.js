@@ -9,7 +9,12 @@ function guardar() {
   tipo = document.getElementById("tipo");
   categoria = document.getElementById("categoria");
 
-  if (codigo.value === "" || nombre.value === "" || tipo.value === "" || categoria.value === "") {
+  if (
+    codigo.value === "" ||
+    nombre.value === "" ||
+    tipo.value === "" ||
+    categoria.value === ""
+  ) {
     alert("Por favor, llene todos los campos.");
     return;
   }
@@ -164,6 +169,7 @@ function eliminar() {
     JSON.stringify(tipoIngresoOEgresos)
   );
 
+  nuevo();
   cargarTabla();
   console.log(tipoIngresoOEgresos);
 }

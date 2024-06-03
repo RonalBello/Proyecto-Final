@@ -53,11 +53,12 @@
 }
 
 .informacion textarea {
-    height: 120px;
-    max-height: 140px;
-    min-height: 100px;
-    max-width: 450px;
-    min-width: 450px;
+    height: 125px;
+    max-height: 125px;
+    min-height: 125px;
+    max-width: 70%;
+    min-width: 70%;
+    width: 70%;
 }
 
 .tablaDeTipos {
