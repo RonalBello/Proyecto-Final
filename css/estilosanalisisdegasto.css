@@ -1,0 +1,22 @@
+body {
+    height: 100vh;
+    margin: 0px;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.contenedorFlex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.grafico {
+    height: 80%;
+    width: 80%;
+    background-color: rgb(201, 200, 200);
+}
+

@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colorCirculos: rgb(0, 0, 0);
+    --colorBoton: rgb(88, 88, 87);
+    --coloFondosGris: rgb(177, 173, 173);
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+.titulo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.titulo h1 {
+    color: #000000;
+}
+
+.contenedorFlex {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    height: 90vh;
+}
+
+.tablaDeConsejos {
+    margin-top: 13px;
+    background-color: var(--coloFondosGris);
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    width: 90%;
+    overflow: auto;
+    max-height: 700px;
+    height: 80vh;
+}
+
+.tablaDeConsejos table tr {
+    display: inline-table;
+    border-radius: 10px;
+    width: 90%;
+    height: 40px;
+    background-color: rgb(187, 189, 189);
+    margin-top: 13px;
+}
+
+.divTitulo {
+    font-weight: bold;
+    text-align: left;
+    padding-left: 50px;
+    margin: 15px;
+}
+
+.divContenido {
+    text-align: left;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
