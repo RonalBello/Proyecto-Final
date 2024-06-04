@@ -118,27 +118,21 @@ function actualizar(codigo) {
 }
 
 function mostrarDatos() {
-  let codigo = null;
-  let nombre = null;
-  let descripcion = null;
-  let tipo = null;
-  let categoria = null;
-  let codigoAMostrar = null;
-
   tipoIngresoOEgresos = JSON.parse(
     localStorage.getItem("tipoIngresoOEgresos") || "[]"
   );
-
-  nombre = document.getElementById("nombreTipo");
-  descripcion = document.getElementById("descripcion");
-  tipo = document.getElementById("tipo");
-  categoria = document.getElementById("categoria");
-  codigoAMostrar = document.getElementById("codigo");
 
   codigo = this.parentNode.parentNode.children[0].textContent;
 
   for (let i = 0; i < tipoIngresoOEgresos.length; i++) {
     if (tipoIngresoOEgresos[i].codigo == codigo) {
+
+      nombre = document.getElementById("nombreTipo");
+      descripcion = document.getElementById("descripcion");
+      tipo = document.getElementById("tipo");
+      categoria = document.getElementById("categoria");
+      codigoAMostrar = document.getElementById("codigo");
+
       codigoAMostrar.value = codigo;
       nombre.value = tipoIngresoOEgresos[i].nombre;
       descripcion.value = tipoIngresoOEgresos[i].descripcion;

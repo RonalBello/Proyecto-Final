@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilostransacciones.css">
+    <script src="../js/transacciones.js"></script>
+    <script src="../js/crudtransacciones.js"></script>
+    <title>Gestión de transacciones</title>
+</head>
+
+<body>
+    <div class="titulo">
+        <h1>Gestión de transacciones</h1>
+    </div>
+
+
+    <div class="contenedorFlex">
+
+        <div class="inputsInformacion">
+
+            <div class="informacion">
+                <label>Tipo de transacción:</label>
+                <select id="tipoTransaccion">
+                    <option value="ingreso">Ingreso</option>
+                    <option value="egreso">Egreso</option>
+                </select>
+            </div>
+
+            <div class="informacion">
+                <label>Tipo de ingreso o egreso:</label>
+                <select id="tipoEgresoOIngreso">
+                </select>
+            </div>
+
+            <div class="informacion">
+                <label>Valor de la transaccion:</label>
+                <input type="number" id="valorTransaccion">
+            </div>
+
+            <div class="informacion">
+                <label>Cuenta bancaria:</label>
+                <select id="cuentaBancaria">
+                </select>
+            </div>
+
+            <div class="informacion">
+                <label>Fecha:</label>
+                <input type="date" id="fechaTransaccion">
+            </div>
+
+            <div class="informacion">
+                <label>Descripción:</label>
+                <textarea id="descripcion"></textarea>
+            </div>
+
+            <div class="informacion">
+                <label>Adjuntar archivo:</label>
+                <label for="archivoAdjunto" id="labelDelArchivo">Cargar</label>
+                <input type="file" id="archivoAdjunto">
+            </div>
+
+            <button onclick="guardar()">Guardar</button>
+
+        </div>
+
+
+
+        <div class="tablaDeTransacciones">
+
+            <h3>Transacciones</h3>
+
+            <table id="tablaDeTransacciones">
+            </table>
+
+
+        </div>
+
+    </div>
+
+    <script>
+
+        tipoIngresoOEgresos = JSON.parse(
+            localStorage.getItem("tipoIngresoOEgresos") || "[]"
+        );
+
+
+        for (let i = 0; i < tipoIngresoOEgresos.length; i++) {
+            let tipo = tipoIngresoOEgresos[i].nombre;
+            let option = document.createElement("option");
+            option.value = tipo;
+            option.text = tipo;
+            document.getElementById("tipoEgresoOIngreso").appendChild(option);
+        }
+
+        cuentasBancarias = JSON.parse(
+            localStorage.getItem("cuentasBancarias") || "[]"
+        );
+
+
+        for (let i = 0; i < cuentasBancarias.length; i++) {
+            let cuenta = cuentasBancarias[i].numero;
+            let option = document.createElement("option");
+            option.value = cuenta;
+            option.text = cuenta;
+            document.getElementById("cuentaBancaria").appendChild(option);
+        }
+
+
+        let inputArchivo = document.getElementById("archivoAdjunto");
+
+        inputArchivo.addEventListener("change", function () {
+            if (inputArchivo.files.length > 0) {
+                labelDelArchivo = document.getElementById("labelDelArchivo");
+
+                labelDelArchivo.innerHTML = inputArchivo.files[0].name;
+            } else {
+            console.log("No se ha cargado ningún archivo.");
+            }
+        });
+
+        cargarTabla()
+
+    </script>
+
+
+</body>
+
+</html>

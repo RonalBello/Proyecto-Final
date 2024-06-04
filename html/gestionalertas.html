@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilosgestionalertas.css">
+    <script src="../js/alertas.js"></script>
+    <script src="../js/crudalertas.js"></script>
+    <title>Gestión de alertas</title>
+</head>
+<body>
+    
+    <div class="titulo">
+        <h1>Gestión de alertas</h1>
+    </div>
+   
+
+    <div class="contenedorFlex">
+
+        <div class="inputsInformacion">
+
+            <div class="informacion">
+                <label>Tipo de alerta:</label>
+                <select id="tipoAlerta">
+                    <option>Vencimiento de factura</option>
+                    <option>Saldo mínimo alcanzado</option>
+                    <option>Pago Pendiente</option>
+                </select>
+            </div>
+
+            <div class="informacion">
+                <label>Descripción:</label>
+                <textarea id="descripcion"></textarea>
+            </div>
+
+            <div class="informacion">
+                <label>Fecha:</label>
+                <input type="date" id="fecha">
+            </div>
+
+            <div class="informacion">
+                <label>Hora</label>
+                <input type="time" id="hora">
+            </div>
+
+            <div class="informacion">
+                <label>Opciones de repeticón:</label>
+                <select id="opcionesRepetciones">
+                    <option>Una vez</option>
+                    <option>Diario</option>
+                    <option>Semanal</option>
+                    <option>Mensual</option>
+                    <option>Anual</option>
+                </select>
+            </div>
+
+            <button onclick="guardar()">Guardar</button>
+        </div>
+
+        <div class="tablaDeAlertas">
+
+            <table id="tablaDeAlertas"></table>
+
+        </div>
+
+
+
+    </div>
+
+    <script>
+        cargarTabla();
+    </script>
+
+</body>
+</html>

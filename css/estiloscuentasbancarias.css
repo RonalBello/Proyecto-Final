@@ -1,0 +1,138 @@
+:root {
+    --colorCirculos: rgb(0, 0, 0);
+    --colorBoton: rgb(88, 88, 87);
+    --coloFondosGris: rgb(177, 173, 173);
+}
+
+.contenedorFlex {
+    display: flex;
+}
+
+.titulo {
+    width: 100%;
+    text-align: center;
+}
+
+
+.inputsInformacion {
+    margin-top: 15px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.inputsInformacion button {
+    border: 0px;
+    color: white;
+    background-color: var(--colorBoton);
+    border-radius: 10px;
+    height: 40px;
+    width: 100%;
+}
+
+.informacion {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.informacion label {
+    width: 30%;
+}
+
+.informacion input,
+textarea,
+select {
+    border: 0px;
+    background-color: rgb(180, 181, 182);
+    width: 70%;
+    border-radius: 5px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.informacion input,
+select {
+    height: 40px;
+}
+
+.informacion textarea {
+    height: 125px;
+    max-height: 125px;
+    min-height: 125px;
+    max-width: 70%;
+    min-width: 70%;
+    width: 70%;
+}
+
+.tablaDeCuentas {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 13px;
+    background-color: var(--coloFondosGris);
+    border-radius: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    width: 50%;
+    overflow: auto;
+    max-height: 700px;
+}
+
+.tablaDeCuentas table tr {
+    display: inline-table;
+    border-radius: 10px;
+    width: 90%;
+    height: 40px;
+    background-color: rgb(206, 208, 209);
+    margin-bottom: 10px;
+}
+
+.tablaDeCuentas input {
+    height: 30px;
+    width: 82%;
+    border-radius: 10px;
+    border: 0px;
+    margin-bottom: 15px;
+}
+
+.tdBotones {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding-right: 20px;
+    gap: 10px;
+}
+
+.tdBotones button {
+    border: 0px;
+    background-color: var(--colorBoton);
+    border-radius: 5px;
+    color: white;
+    height: 33px;
+
+}
+
+.tdNombreYNumero {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.numeroCuenta {
+    display: none;
+}
+
+input[id="filtro"] {
+    padding-left: 40px;
+    background-image: url('../recursos/img/lupa.png');
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}

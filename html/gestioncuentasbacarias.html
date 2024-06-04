@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estiloscuentasbancarias.css">
+    <script src="../js/crudcuentasbancarias.js"></script>
+    <script src="../js/ceuntasbancarias.js"></script>
+    <title>Gestión de cuentas bancarias</title>
+</head>
+
+<body>
+    <div class="titulo">
+        <h1>Gestión de Cuentas Bancarias</h1>
+    </div>
+
+
+    <div class="contenedorFlex">
+
+        <div class="inputsInformacion">
+
+            <div class="informacion">
+                <label>Numero de la cuenta:</label>
+                <input type="text" id="numeroCuenta">
+            </div>
+
+            <div class="informacion">
+                <label>Nombre del banco:</label>
+                <input type="text" id="nombreBanco">
+            </div>
+
+            <div class="informacion">
+                <label>Tipo de cuenta:</label>
+                <select id="tipoCuenta">
+                    <option value="cuentaCorriente">Cuenta corriente</option>
+                    <option value="cuentaAhorros">Cuenta de ahorros</option>
+                    <option value="cuentaInversión">Cuenta de inversión</option>
+                </select>
+            </div>
+
+            <div class="informacion">
+                <label>Saldo actual:</label>
+                <input type="number" id="saldoActual">
+            </div>
+
+            <div class="informacion">
+                <label>Estado de la cuenta:</label>
+                <select id="estadoCuenta">
+                    <option value="activa">Activa</option>
+                    <option value="inactiva">Inactiva</option>
+                    <option value="cerrada">Cerrada</option>
+                </select>
+            </div>
+
+            <div class="informacion">
+                <label>Fecha de apertura:</label>
+                <input type="date" id="fecha">
+            </div>
+
+            <div class="informacion">
+                <label>Descripción:</label>
+                <textarea id="descripcion"></textarea>
+            </div>
+
+            <button onclick="guardar()">Guardar</button>
+
+
+        </div>
+
+        <div class="tablaDeCuentas">
+
+            <h3>Cuentas Bancarias</h3>
+
+            <div>
+
+               
+                <input type="text" id="filtro" placeholder="Buscar cuentas" onkeyup="filtrarCuentas()">
+
+            </div>
+
+            <table id="tablaDeCuentas">
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <script>
+        cargarTabla()
+    </script>
+
+</body>
+
+</html>
