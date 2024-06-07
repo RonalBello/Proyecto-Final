@@ -1,17 +1,17 @@
-{
-    "consejos_ahorro": [
-      {
-        "titulo": "Crea un presupuesto detallado",
-        "contenido": "Elaborar un presupuesto mensual es el primer paso hacia un ahorro efectivo. Incluye todos tus ingresos y clasifica tus gastos en categorías como alimentación, transporte, vivienda, entretenimiento, y ahorro. Sé lo más específico posible, registrando incluso los gastos pequeños que pueden pasar desapercibidos. Al final del mes, revisa tu presupuesto para ver si cumpliste tus objetivos y ajusta tus gastos para el siguiente mes según sea necesario. Este proceso te ayudará a identificar patrones de gasto innecesarios y a tomar decisiones más informadas sobre cómo manejar tu dinero."
-      },
-      {
-        "titulo": "Establece metas de ahorro SMART",
-        "contenido": "Las metas de ahorro deben ser Específicas, Medibles, Alcanzables, Relevantes y con un Tiempo definido (SMART, por sus siglas en inglés). Por ejemplo, en lugar de decir 'quiero ahorrar dinero', establece una meta como 'quiero ahorrar $1,000 en seis meses para unas vacaciones'. Desglosa esta meta en pequeños pasos mensuales, es decir, ahorrar aproximadamente $167 cada mes. Tener metas claras y alcanzables te permitirá mantener la motivación y seguir tu progreso. Además, celebra los pequeños logros a lo largo del camino para mantenerte motivado."
-      },
-      {
-        "titulo": "Automatiza tus ahorros y revisa periódicamente",
-        "contenido": "Una manera efectiva de asegurar que ahorras regularmente es automatizando tus ahorros. Configura transferencias automáticas desde tu cuenta corriente a tu cuenta de ahorros al inicio de cada mes, inmediatamente después de recibir tu sueldo. Esto te ayudará a priorizar el ahorro antes de gastar en otras cosas. Además, revisa periódicamente tus ahorros y ajusta las cantidades si es necesario. Con el tiempo, trata de incrementar la cantidad que transfieres automáticamente a medida que te sientas más cómodo con tu presupuesto y descubras nuevas maneras de reducir gastos."
-      }
-    ]
+[
+  {
+    "id": 1,
+    "titulo": "Crea un presupuesto detallado",
+    "contenido": "Elabora un presupuesto mensual para rastrear tus ingresos y gastos. Incluye todas tus fuentes de ingresos y todos tus gastos, desde los más grandes hasta los más pequeños. Esto te permitirá ver claramente dónde puedes reducir gastos innecesarios. Usa herramientas digitales como aplicaciones de presupuesto para facilitar este seguimiento y hacer ajustes en tiempo real."
+  },
+  {
+    "id": 2,
+    "titulo": "Ahorra para emergencias",
+    "contenido": "Establece un fondo de emergencia con suficiente dinero para cubrir al menos tres a seis meses de gastos básicos. Este fondo te protegerá en caso de imprevistos como pérdida de empleo, gastos médicos inesperados o reparaciones urgentes en el hogar. Comienza depositando una pequeña cantidad regularmente y aumenta el monto a medida que puedas. Mantén este dinero en una cuenta de fácil acceso pero separada de tus cuentas de uso diario."
+  },
+  {
+    "id":3,
+    "titulo": "Invierte a largo plazo",
+    "contenido": "Considera invertir en el mercado de valores o en otros instrumentos financieros para hacer crecer tu dinero a lo largo del tiempo. Diversifica tus inversiones para mitigar riesgos y consulta con un asesor financiero para elegir las opciones que mejor se adapten a tus objetivos y tolerancia al riesgo. Recuerda que las inversiones a largo plazo, como fondos indexados y cuentas de jubilación, pueden ofrecer mayores rendimientos debido al poder del interés compuesto."
   }
-  
+]

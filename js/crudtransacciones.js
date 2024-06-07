@@ -98,7 +98,7 @@ function cargarTabla() {
     id.classList.add("ocultar");
 
     datosAMostar = document.createElement("td");
-    datosAMostar.innerText =
+    datosAMostar.innerText = transacciones[i].tipoAsociado + " : " +
       transacciones[i].tipo.toUpperCase() + " : " + transacciones[i].valor;
     datosAMostar.classList.add("tdInformacion");
 
@@ -178,6 +178,9 @@ function nuevo() {
   fechaTransaccion = document.getElementById("fechaTransaccion");
   descripcion = document.getElementById("descripcion");
   archivoAdjunto = document.getElementById("archivoAdjunto");
+  labelDelArchivo = document.getElementById("labelDelArchivo");
+
+  labelDelArchivo.innerHTML = "Cargar";
 
   tipoTransaccion.value = "";
   tipoEgresoOIngreso.value = "";

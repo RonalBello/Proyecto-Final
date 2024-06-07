@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilosguiadeahorro.css">
+    <script src="../js/guiadeahorro.js"></script>
+    <script src="../js/consejo.js"></script>
+
+    <title>Gestión Guía de ahorro</title>
+</head>
+
+<body>
+
+
+
+    <div class="titulo">
+        <div>
+            <h1>Guía de ahorro</h1>
+        </div>
+        <div class="botonCrearConsejo" onclick="mostarVentana(0)"><button>Nuevo Consejo</button></div>
+    </div>
+
+
+    <div class="contenedorFlex">
+
+        <div class="tablaDeConsejos">
+
+            <table id="tablaDeConsejos">
+            </table>
+        </div>
+
+        <div class="ventanaConsejo" id="ventanaConsejo">
+
+            <h2 id="tituloVentana">Crear Nuevo Consejo</h2>
+
+            <label class="textoEnVentana">Titulo</label>
+
+            <input type="text" id="titulo">
+
+            <label class="textoEnVentana">Contenido</label>
+
+            <textarea id="contenido"></textarea>
+
+            <div class="botones">
+
+                <button onclick="cerrarVentana()">Cancelar</button>
+                <button onclick="guardar()" id="boton">Crear</button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script>
+
+        cargarGuiaConsejosLocalStorage();
+
+    </script>
+
+
+</body>
+
+</html>

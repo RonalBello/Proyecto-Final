@@ -102,7 +102,7 @@ function cargarTabla() {
     fila.appendChild(celdaNumeroCuentaAUsar);
     celdaNumeroCuentayNombreBanco = document.createElement("td");
     celdaNumeroCuentayNombreBanco.innerText =
-      cuentasBancarias[i].numero + " : " + cuentasBancarias[i].nombreBanco;
+      cuentasBancarias[i].numero + " : " + cuentasBancarias[i].nombreBanco + " : $" + cuentasBancarias[i].saldoActual;
     celdaNumeroCuentayNombreBanco.classList.add("tdNombreYNumero");
     fila.appendChild(celdaNumeroCuentayNombreBanco);
 

@@ -114,7 +114,7 @@
             if (inputArchivo.files.length > 0) {
                 labelDelArchivo = document.getElementById("labelDelArchivo");
 
-                labelDelArchivo.innerHTML = inputArchivo.files[0].name;
+                labelDelArchivo.innerHTML = "Archivo: " + inputArchivo.files[0].name;
             } else {
             console.log("No se ha cargado ningún archivo.");
             }

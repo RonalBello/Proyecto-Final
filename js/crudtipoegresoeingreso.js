@@ -65,7 +65,7 @@ function cargarTabla() {
     columnaCodigo.innerText = tipoIngresoOEgresos[i].codigo;
     columnaNombre = document.createElement("td");
     columnaNombre.classList.add("tdNombreIngreso");
-    columnaNombre.innerText = tipoIngresoOEgresos[i].nombre;
+    columnaNombre.innerText = tipoIngresoOEgresos[i].nombre + " : " + tipoIngresoOEgresos[i].categoria;
     columnaAcciones = document.createElement("td");
     columnaAcciones.classList.add("tdBotones");
     botonActualizar = document.createElement("button");
