@@ -2,6 +2,7 @@ idTemporal = 0;
 
 function guardar() {
   transacciones = JSON.parse(localStorage.getItem("transacciones") || "[]");
+  cuentasBancarias = JSON.parse(localStorage.getItem("cuentasBancarias") || "[]");
 
   tipoTransaccion = document.getElementById("tipoTransaccion");
   tipoEgresoOIngreso = document.getElementById("tipoEgresoOIngreso");
@@ -10,6 +11,23 @@ function guardar() {
   fechaTransaccion = document.getElementById("fechaTransaccion");
   descripcion = document.getElementById("descripcion");
   archivoAdjunto = document.getElementById("archivoAdjunto");
+
+  for (let i = 0; i < cuentasBancarias.length; i++) {
+    if (cuentasBancarias[i].numero == cuentaBancaria.value) {
+      if (tipoTransaccion.value == "egreso") {
+        if (cuentasBancarias[i].saldoActual < valorTransaccion.value) {
+          alert(
+            "El saldo actual de la cuenta es insuficiente para realizar la transacción"
+          );
+          return;
+        } else {
+          cuentasBancarias[i].saldoActual -= valorTransaccion.value;
+        }
+      } else if (tipoTransaccion.value == "ingreso") {
+        cuentasBancarias[i].saldoActual += Number(valorTransaccion.value);
+      }
+    }
+  }
 
   if (
     tipoTransaccion.value === "" ||
@@ -49,6 +67,9 @@ function guardar() {
     cargarTabla();
     nuevo();
   }
+
+ localStorage.setItem("cuentasBancarias", JSON.stringify(cuentasBancarias));
+
   cargarTabla();
   idTemporal = 0;
 }
@@ -98,8 +119,12 @@ function cargarTabla() {
     id.classList.add("ocultar");
 
     datosAMostar = document.createElement("td");
-    datosAMostar.innerText = transacciones[i].tipoAsociado + " : " +
-      transacciones[i].tipo.toUpperCase() + " : " + transacciones[i].valor;
+    datosAMostar.innerText =
+      transacciones[i].tipoAsociado +
+      " : " +
+      transacciones[i].tipo.toUpperCase() +
+      " : " +
+      transacciones[i].valor;
     datosAMostar.classList.add("tdInformacion");
 
     celdaAcciones = document.createElement("td");
