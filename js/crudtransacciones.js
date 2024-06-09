@@ -119,11 +119,11 @@ function cargarTabla() {
     id.classList.add("ocultar");
 
     datosAMostar = document.createElement("td");
-    datosAMostar.innerText =
+    datosAMostar.innerText = transacciones[i].tipo.toUpperCase() + " : " +
       transacciones[i].tipoAsociado +
       " : " +
-      transacciones[i].tipo.toUpperCase() +
-      " : " +
+      
+      
       transacciones[i].valor;
     datosAMostar.classList.add("tdInformacion");
 

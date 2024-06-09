@@ -11,7 +11,7 @@ function cargarDatos() {
 
         celdaInformacion = document.createElement("td");
 
-        celdaInformacion.innerHTML = transacciones[i].tipo.toUpperCase() + " : " + transacciones[i].valor + " COP";
+        celdaInformacion.innerHTML = transacciones[i].tipo.toUpperCase() + " : " + transacciones[i].tipoAsociado + " : " + transacciones[i].valor + " COP";
         celdaInformacion.classList.add("tdInformacion")
 
         celdaFecha = document.createElement("td");
